@@ -1,12 +1,39 @@
-# DigiPin Docker Compose Setup Guide
+# Digipin API Docker Helper
 
-This guide will help you set up the DigiPin API using Docker Compose for both development and production environments.
+A Docker-based setup utility for integrating with India's Digipin geospatial addressing system API.
 
-## Prerequisites
+## About Digipin
 
-- Docker Engine 20.10+
-- Docker Compose v2.0+
-- Git
+Digipin is India's nationwide geo-coded addressing system developed by the Department of Posts in collaboration with IIT Hyderabad and NRSC, ISRO. It provides precise location identification by dividing India into approximately 4m x 4m grids, with each grid assigned a unique 10-character alphanumeric code based on latitude and longitude coordinates.
+
+## Key Features of Digipin:
+- **Precision**: Identifies locations within 4m x 4m accuracy
+- **Coverage**: Works across all Indian regions including rural, remote, and urban areas
+- **Privacy-Focused**: No personal data storage, only geographic coordinates
+- **Offline Capability**: Functions without internet connectivity once generated
+- **Open Source**: Programming logic available in public domain
+- **Coordinates Coverage**: Longitude 63.5-99.5°E, Latitude 2.5-38.5°N
+
+## What This Docker Helper Provides
+
+This repository simplifies the setup and deployment of applications that integrate with the Digipin API by providing:
+
+- **Containerized Environment**: Pre-configured Docker setup for Digipin API integration
+- **Easy Configuration**: Environment variables and configuration templates
+- **Development Ready**: Local development environment with hot-reload capabilities
+- **Production Deployment**: Optimized production-ready containers
+- **API Documentation**: Integrated API documentation and examples
+- **Health Checks**: Built-in monitoring and health check endpoints
+
+## Use Cases
+
+Perfect for applications requiring:
+- **Delivery Services**: Precise location-based delivery in India
+- **Emergency Services**: Quick location identification for first responders
+- **Government Services**: Efficient service delivery with accurate addressing
+- **Logistics**: Improved supply chain management with precise coordinates
+- **Rural Development**: Addressing solutions for areas without traditional addresses
+- **Navigation Systems**: Integration with mapping and navigation applications
 
 ## Quick Start
 
