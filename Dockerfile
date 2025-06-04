@@ -4,17 +4,15 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /usr/src/app
 
-# Install curl for health checks
-RUN apk add --no-cache curl
+# Install curl and git for health checks and cloning
+RUN apk add --no-cache curl git
 
-# Copy package.json and package-lock.json (if available)
-COPY package*.json ./
+# Clone the DigiPin repository
+RUN git clone https://github.com/CEPT-VZG/digipin.git . && \
+    rm -rf .git
 
 # Install dependencies
 RUN npm ci --only=production && npm cache clean --force
-
-# Copy application source code
-COPY . .
 
 # Create a non-root user to run the application
 RUN addgroup -g 1001 -S nodejs && \

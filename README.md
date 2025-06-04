@@ -10,25 +10,23 @@ This guide will help you set up the DigiPin API using Docker Compose for both de
 
 ## Quick Start
 
-1. **Clone the DigiPin repository:**
+1. **Clone this repository:**
    ```bash
-   git clone https://github.com/CEPT-VZG/digipin.git
-   cd digipin
+   git clone git@github.com:alfa-intellitech/digipin-api-docker.git
    ```
 
-2. **Add the Docker files to your project:**
-   - Copy the `docker-compose.yml` file to the root directory
-   - Copy the `Dockerfile` to the root directory
-   - Copy the `.env` template and customize it
-   - Create `nginx/` directory and add the nginx configuration (for production)
+2. **cd digipin-api-docker folder:**
+   ```bash
+   cd digipin-api-docker
+   ```
 
 3. **Create environment file:**
    ```bash
-   cp .env.template .env
+   cp .env.example .env
    # Edit .env file as needed
    ```
 
-4. **Start the basic setup:**
+4. **Start the setup:**
    ```bash
    docker-compose up -d
    ```
@@ -73,18 +71,18 @@ Key environment variables you can configure in `.env`:
 
 ## Directory Structure
 
-Your project should look like this:
+Your project directory should look like this:
 ```
-digipin/
+digipin-api-docker/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── .env
 ├── nginx/
 │   └── nginx.conf
-├── package.json
-├── (other DigiPin source files)
-└── README.md
+└── logs/ (created automatically)
 ```
+
+Note: The DigiPin source code is automatically cloned during the Docker build process.
 
 ## API Endpoints
 
